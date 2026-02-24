@@ -14,7 +14,7 @@ Ce document répertorie les problèmes de qualité de code identifiés par l'out
 | `RingingTimer.java` | Point-virgule superflu | `UnnecessarySemicolon` | Supprimé | ✅ Corrigé |
 | `SetTimer.java` | Point-virgule superflu | `UnnecessarySemicolon` | Supprimé | ✅ Corrigé |
 
-## Conclusion
+## Conclusion.  
 
 L'analyse PMD finale montre que les problèmes de style et de redondance ont été traités. Les erreurs de compilation introduites lors du refactorage initial ont été corrigées en restaurant la structure des types et le mécanisme de transition `entry()`.
 
