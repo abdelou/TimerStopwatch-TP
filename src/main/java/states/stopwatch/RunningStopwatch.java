@@ -3,12 +3,16 @@ package states.stopwatch;
 import states.ClockState;
 
 public class RunningStopwatch extends ActiveStopwatch {
- 
-	// use Singleton design pattern
-	private RunningStopwatch() {}; // make constructor invisible to clients
+
+    // use Singleton design pattern
+    private RunningStopwatch() {
+    } // make constructor invisible to clients
+
     private static RunningStopwatch instance = null;
+
     public static RunningStopwatch Instance() {
-        if(instance == null) instance = new RunningStopwatch();                
+        if (instance == null)
+            instance = new RunningStopwatch();
         return instance;
     }
 
@@ -16,22 +20,28 @@ public class RunningStopwatch extends ActiveStopwatch {
     public ClockState up() {
         return transition(LaptimeStopwatch.Instance());
     }
-    public String getUpText() { return "split"; }
-    
+
+    public String getUpText() {
+        return "split";
+    }
+
     @Override
     public ClockState right() {
         return transition(ResetStopwatch.Instance());
     }
-    public String getRightText() {return "reset"; }
-    
+
+    public String getRightText() {
+        return "reset";
+    }
+
     @Override
     protected ClockState doIt() {
-      totalTime++;
-      return this;
-      }
-    
+        totalTime++;
+        return this;
+    }
+
     public String getDisplayString() {
         return "totalTime = " + totalTime;
     }
-     
+
 }

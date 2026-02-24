@@ -6,7 +6,7 @@ public class RingingTimer extends ActiveTimer {
 
     // use Singleton design pattern
     private RingingTimer() {
-    }; // make constructor invisible to clients
+    }
 
     private static RingingTimer instance = null;
 
@@ -14,6 +14,12 @@ public class RingingTimer extends ActiveTimer {
         if (instance == null)
             instance = new RingingTimer();
         return instance;
+    }
+
+    @Override
+    public ClockState up() {
+        context.currentState = IdleTimer.Instance();
+        return IdleTimer.Instance();
     }
 
     @Override
