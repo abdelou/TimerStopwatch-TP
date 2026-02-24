@@ -3,7 +3,8 @@ package states.timer;
 import states.ClockState;
 
 public class RingingTimer extends ActiveTimer {
- 	
+
+    private static final Logger logger = LoggerFactory.getLogger(RingingTimer.class);
 	// use Singleton design pattern
 	private RingingTimer() {}; // make constructor invisible to clients
     private static RingingTimer instance = null;
