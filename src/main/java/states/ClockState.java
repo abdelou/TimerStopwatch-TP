@@ -37,6 +37,7 @@ public abstract class ClockState {
     protected void exit() {
     	// the exit action of the state, which is empty (no action) by default
 
+    //changer sytesm.out par logger
         logger.fine("exiting{}" + this.getClass().getName()); }
     protected ClockState doIt() {
     	// specific behaviour to be implemented in each state.
